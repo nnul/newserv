@@ -217,7 +217,7 @@ void ProxyServer::receive_and_process_commands(bool from_server) {
 
   for (;;) {
     if (input_header->size == 0) {
-      ssize_t bytes = evbuffer_copyout(source_buf, input_header,
+      size_t bytes = evbuffer_copyout(source_buf, input_header,
           sizeof(*input_header));
       //log(INFO, "[ProxyServer-debug] %zd bytes copied for header", bytes);
       if (bytes < sizeof(*input_header)) {

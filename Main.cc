@@ -1,6 +1,7 @@
 #include <signal.h>
 #include <pwd.h>
 #include <event2/event.h>
+#include <string.h>
 
 #include <unordered_map>
 #include <phosg/JSON.hh>
@@ -195,7 +196,7 @@ int main(int argc, char* argv[]) {
 
   string proxy_hostname;
   int proxy_port = 0;
-  for (size_t x = 1; x < argc; x++) {
+  for (int x = 1; x < argc; x++) {
     if (!strncmp(argv[x], "--proxy-destination=", 20)) {
       auto netloc = parse_netloc(&argv[x][20], 9100);
       proxy_hostname = netloc.first;

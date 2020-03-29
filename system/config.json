@@ -2,9 +2,9 @@
   // Configuration file for newserv. This file is standard JSON with comments.
 
   // Server's name (maximum 16 characters)
-  "ServerName": "Alexandria",
+  "ServerName": "nnul.me",
   // Address to connect local clients to (IP address or interface name)
-  "LocalAddress": "192.168.0.5",
+  "LocalAddress": "192.168.0.102",
   // Address to connect external clients to (IP address or interface name)
   "ExternalAddress": "en0",
   // Set to false to disable the DNS server
@@ -17,13 +17,14 @@
   // file. By enabling this option, all users will be allowed to connect. This
   // option has no effect for Blue Burst clients. Keep in mind that unregistered
   // users cannot be banned!
-  "AllowUnregisteredUsers": false,
+  "AllowUnregisteredUsers": true,
 
   // User to run the server as. If present, newserv will attempt to switch to
   // this user's permissions after loading its configuration and opening
   // listening sockets. The special value $SUDO_USER causes newserv to look up
   // the desired username in the $SUDO_USER variable instead.
-  "User": "$SUDO_USER",
+  //"User": "$SUDO_USER",
+  "User": "root",
 
   // Information menu contents. Each entry is a 3-list of
   // [title, short description, full contents]. In the short description and
@@ -49,7 +50,7 @@
   ],
   // Welcome message. If not blank, this message will be shown to console users
   // upon first connecting.
-  "WelcomeMessage": "Welcome to $C6Alexandria$C7, a private PSO server\npowered by newserv.",
+  "WelcomeMessage": "Welcome to the $C6nnul.me$C7 private PSO server\npowered by newserv.",
 
   // Item drop rates for non-rare items. For each type (boxes or enemies), all
   // the categories must add up to a number less than 0x100000000. Each number
@@ -106,6 +107,6 @@
      0x34, 0x34, 0x37, 0x37, 0x3A, 0x3A, 0x3D, 0x3D, 0x3F, 0x3F, 0x41, 0x41,
      0x42, 0x42, 0x43, 0x43, 0x44, 0x44, 0x45, 0x45, 0x46, 0x46, 0x47, 0x47,
      0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-     0xFF, 0xFF, 0xFF, 0xFF],
-  ],
+     0xFF, 0xFF, 0xFF, 0xFF]
+  ]
 }

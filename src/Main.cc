@@ -39,7 +39,7 @@ static const unordered_map<string, PortConfiguration> default_port_to_behavior({
   {"gc-eu11",  {9201,  GameVersion::GC,    ServerBehavior::LoginServer}},
   {"gc-eu3",   {9203,  GameVersion::GC,    ServerBehavior::LoginServer}},
   {"pc-login", {9300,  GameVersion::PC,    ServerBehavior::LoginServer}},
-  {"pc-patch", {10000, GameVersion::Patch, ServerBehavior::PatchServer}},
+  //{"pc-patch", {10000, GameVersion::Patch, ServerBehavior::PatchServer}},
   {"bb-patch", {11000, GameVersion::Patch, ServerBehavior::PatchServer}},
   {"bb-data",  {12000, GameVersion::BB,    ServerBehavior::DataServerBB}},
 

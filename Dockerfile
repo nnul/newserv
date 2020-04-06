@@ -6,7 +6,7 @@ apt-get install -y libevent-dev make g++
 COPY external external
 COPY src src
 COPY Makefile ./
-RUN make build
+RUN make CC=g++ build
 
 FROM ubuntu:18.04
 

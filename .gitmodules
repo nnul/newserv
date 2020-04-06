@@ -1,3 +1,0 @@
-[submodule "external/phosg"]
-	path = external/phosg
-	url = git@github.com:nnul/phosg.git

@@ -8,7 +8,7 @@
   // Address to connect external clients to (IP address or interface name)
   "ExternalAddress": "en0",
   // Set to false to disable the DNS server
-  "RunDNSServer": true,
+  "RunDNSServer": false,
   // By default, the interactive shell runs if stdin is a terminal, and doesn't
   // run if it's not. This option, if present, overrides that behavior.
   // "RunInteractiveShell": false,

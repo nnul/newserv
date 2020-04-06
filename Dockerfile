@@ -3,7 +3,6 @@ FROM ubuntu:18.04 as build
 RUN apt-get update && \
 apt-get install -y libevent-dev make g++
 
-COPY external external
 COPY src src
 COPY Makefile ./
 RUN make CC=g++ build

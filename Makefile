@@ -1,25 +1,24 @@
-
+DNS_LISTEN=127.0.0.1
 all: build
 
 .PHONY: build
-build: libphosg
-	@cd src && make build
+build:
+	@cd src && $(MAKE) build
 
-.PHONY: libphosg
-libphosg:
-	@cd external/phosg && make build && make install
-	@cd src/ && ln -s ../external/phosg/libphosg
+#.PHONY: libphosg
+#libphosg:
+#    @cd external/phosg && $(MAKE) build && $(MAKE) install
+#    @cd src/ && ln -s ../external/phosg/libphosg
 
 .PHONY: clean
 clean:
-	@cd external/phosg && make clean
-	@cd src/ && rm -rf libphosg
+	#@cd external/phosg && $(MAKE) clean
+	#@cd src/ && rm -rf libphosg
 	@cd src && find . -name \*.o -delete
 	@cd src && rm -rf *.dSYM newserv newserv-dns gmon.out
 
 .PHONY: docker-build
 docker-build:
-	#docker build -t pso-newserv:latest .
 	docker-compose -p pso-newserv build
 
 .PHONY: docker-start
